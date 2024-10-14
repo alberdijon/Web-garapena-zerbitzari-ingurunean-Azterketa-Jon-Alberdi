@@ -30,4 +30,4 @@ class Zita(models.Model):
     mediku_kodea = models.ForeignKey(Medikua, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.paziente_kodea.izena} -- {self.data} -- {self.mediku_kodea.izena}"
+        return f"Pazientea: {self.paziente_kodea.izena} {self.paziente_kodea.abizena}.  {self.data} egunean, {self.mediku_kodea.izena} medikuarekin du zita bat."

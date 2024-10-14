@@ -1,0 +1,26 @@
+Git-hub esteka: https://github.com/alberdijon/Web-garapena-zerbitzari-ingurunean-Azterketa-Jon-Alberdi
+
+
+2.Ariketa:
+    Irudian proyecto_gastos izeneko djangoko proiektu bat ikusten da. Proiektu honen barruan aplikazio bat dago sortuta gastos izenekoa.
+
+    Manage.py: Proiektua bera administratzeko erabiltzen da adibidez serbitzaria martxan ipintzeko, migrazioak egiteko edota erabiltzaile berriak sortzeko.
+
+    Settings.py: Proiektua konfiguratzeko erabiltzen da, adibidez sortzen diren aplikazio ezberdinak instalatzeko, edo datubasearen konexioa konfiguratzeko.
+
+    Views.py: Erabiltzaileak egiten dituen eskaerak kudeatzeko erabiltzen da, eskatzen duenaren arabera, url ezberdin bat itzultzeko datu ezberdinekin.
+
+    Urls.py Gure web horriak izango dituen url ezberdinak kudeatzeko erabiltzen da. Bertan view bakoitzak izango duen url-a ezartzen da.
+    
+3.Ariketa:
+    Hurrengo akatsa ikuzi baduzu, ezan nahi du models.py edo admin.py fitxategian aldaketarenbat egin duzula eta migrazio bat egitea ahaztu duzula. Models.py eta Admin.py fitxategiak datubaseko modelora konektatzen direnez, aldaketa bakoitzaren ondoren migrazio bat egin behar da. Hemen daude migrazioa egiteko pausuak:
+
+    python manage.py makemigrations AplikazioarenIzena
+    python manage.py migrate AplikazioarenIzena
+
+
+4.Ariketa:
+    Kode hori .html fitxategietan aurkitu dezakegu. Kode horren helburua txantiloilak hedatzea da, hau da, errepikatuko den html kodea azkotan ipini beharrean, kode horrekin bein bakarrik idatzi genezake.
+
+5.Ariketa:
+    Model Controller View egitura, gure proiektuak egituratzeko forma bat da, bertan datubasearen konexioa, aplikazioaren logika eta erabiltzaileari erakusten dena fitxategi edo karpeta ezberdinetan banatzen da. Django kasuan, Model atala models.py eta admin.py fitxategietan dugu, View atala, templates karpetaren barruko html ezberdinetan dugu eta Controller atala urls.py, forms.py eta views.py fitxategietan.
