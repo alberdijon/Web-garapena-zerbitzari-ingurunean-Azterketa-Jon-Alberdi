@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eibar Ikasleak - Main Page - Azterketa</title>
+    
+    <!-- Fuentes y estilos de Bootstrap -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Ruslan+Display"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Título principal con enlace al home -->
+      <div class="page-header">
+        <h1><a href="/">Pazienteak - Zerrenda</a></h1>
+      </div>
+
+      <!-- Menú de navegación -->
+      <nav>
+        <ul class="nav nav-pills">
+          <li><a href="{% url 'paziente-default' %}">Pazienteak Kudeatu</a></li>
+          <li><a href="{% url 'paziente-default' %}">Medikuak Kudeatu</a></li>
+          <li><a href="{% url 'paziente-default' %}">Zitak Kudeatu</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contenido dinámico -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-8">
+            {% block content %}
+            <h2>Ongi etorri kudeaketa sistemara!</h2>
+            <p>Mesedez, aukeratu zer nahi duzun kudeatu goiko menutik.</p>
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
