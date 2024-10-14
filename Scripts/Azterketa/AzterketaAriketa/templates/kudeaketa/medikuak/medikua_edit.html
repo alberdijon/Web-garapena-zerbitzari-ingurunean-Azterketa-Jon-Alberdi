@@ -1,0 +1,14 @@
+{% extends 'kudeaketa/medikuak/medikua_kudeatu.html' %}
+{% block content %}
+
+<h3>Medikua editatu</h3>
+<br>
+{% for mediku in medikuak %}
+<h4>
+    {{ mediku }}
+    <a href="{% url 'medikua_edit_form' medikua_id=mediku.id %}" class="btn btn-info">Edit</a>
+</h4>
+<br>
+{% endfor %}
+
+{% endblock %}

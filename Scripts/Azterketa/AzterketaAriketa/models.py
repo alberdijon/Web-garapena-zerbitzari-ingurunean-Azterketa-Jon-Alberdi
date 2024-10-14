@@ -23,11 +23,11 @@ class Pazientea(models.Model):
     def __str__(self):
         return f"{self.id} -- {self.izena} -- {self.abizena} -- {self.historiala}"
 
-class zita(models.Model):
+class Zita(models.Model):
     id = models.AutoField(primary_key= True)
     data = models.DateTimeField(default=timezone.now)
     paziente_kodea = models.ForeignKey(Pazientea, on_delete=models.CASCADE)
     mediku_kodea = models.ForeignKey(Medikua, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.id} -- {self.data} -- {self.paziente_kodea.id} -- {self.mediku_kodea.id}"
+        return f"{self.paziente_kodea.izena} -- {self.data} -- {self.mediku_kodea.izena}"

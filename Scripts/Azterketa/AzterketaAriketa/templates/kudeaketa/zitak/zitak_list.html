@@ -1,0 +1,10 @@
+{% extends 'kudeaketa/zitak/zitak_kudeatu.html' %}
+
+{% block content %}
+<ul>
+  <h4>Hemen dago ziten lista</h4>
+  {% for zita in zitak %}
+  <li>{{ zita }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

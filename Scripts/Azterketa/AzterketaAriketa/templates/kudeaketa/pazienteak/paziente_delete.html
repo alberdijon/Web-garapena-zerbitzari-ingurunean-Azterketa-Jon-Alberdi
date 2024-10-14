@@ -1,0 +1,18 @@
+{% extends 'kudeaketa/pazienteak/pazienteak_kudeatu.html' %}
+{% block content %}
+
+<h3>Pazientea ezabatu</h3>
+<br>
+{% for paziente in pazienteak %}
+<form method="POST" >
+    {% csrf_token %}
+    <h4>
+        {{ paziente }} 
+        <input type="hidden" id="uid" name="uid" value="{{paziente.id}}">
+        <input type="submit" class="btn btn-danger" value="X">
+    </h4>
+    <br>
+</form>
+{% endfor %}
+
+{% endblock %}

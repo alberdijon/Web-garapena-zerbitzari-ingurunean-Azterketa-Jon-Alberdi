@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pazienteak Kudeatu</title>
+    <title>Zitak Kudeatu</title>
     
     <link
       href="https://fonts.googleapis.com/css?family=Ruslan+Display"
@@ -21,15 +21,13 @@
   <body>
     <div class="container">
       <div class="page-header">
-        <h1><a href="{% url 'page-default' %}">Pazienteak Kudeatu</a></h1>
+        <h1><a href="{% url 'page-default' %}">Zitak Kudeatu</a></h1>
       </div>
 
       <nav>
         <ul class="nav nav-pills">
-          <li><a href="{% url 'paziente-default' %}">Guztiak Ikusi</a></li>
-          <li><a href="{% url 'paziente-new' %}">Berria Gehitu</a></li>
-          <li><a href="{% url 'paziente-edit' %}">Editatu</a></li>
-          <li><a href="{% url 'paziente-delete' %}">Pazientea Borratu</a></li>
+          <li><a href="{% url 'zitak-default' %}">Guztiak Ikusi</a></li>
+          <li><a href="{% url 'zitak-new' %}">Berria Gehitu</a></li>
         </ul>
       </nav>
 
@@ -37,10 +35,10 @@
         <div class="row">
           <div class="col-md-8">
             {% block content %}
-            <h2>Pazienteen zerrenda</h2>
+            <h2>Ziten zerrenda</h2>
             <ul>
-              {% for paziente in pazienteak %}
-              <li>{{ paziente }}</li>
+              {% for zita in zitak %}
+              <li>{{ zita }}</li>
               {% endfor %}
             </ul>
             {% endblock %}
