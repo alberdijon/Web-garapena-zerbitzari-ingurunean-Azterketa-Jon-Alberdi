@@ -9,4 +9,6 @@ urlpatterns = [
     path('pazienteak/new/', views.paziente_new, name='paziente-new'),
 
     path('pazienteak/edit/', views.paziente_edit, name='paziente-edit'),
+    path('pazienteak/edit/<int:paziente_id>/', views.paziente_edit_form, name='paziente_edit_form'),
+
 ]

@@ -1,0 +1,14 @@
+{% extends 'kudeaketa/pazienteak/pazienteak_kudeatu.html' %}
+{% block content %}
+
+<h3>Pazientea editatu</h3>
+<br>
+{% for paziente in pazienteak %}
+<h4>
+    {{ paziente }}
+    <a href="{% url 'paziente_edit_form' paziente_id=paziente.id %}" class="btn btn-info">Edit</a>
+</h4>
+<br>
+{% endfor %}
+
+{% endblock %}
